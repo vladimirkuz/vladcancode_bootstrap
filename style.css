@@ -2,6 +2,10 @@
     height: calc(100vh - 64px);
 }
 
+#animated {
+  display: none;
+}
+
 .vertical-center {
   display: flex;
   align-items: center;
@@ -97,9 +101,13 @@ a.socialIcon:hover, .socialHoverClass {
 }
 
 #projects {
-  height:35px;
+  height:70px;
 }
 
 #contact {
+  height:35px;
+}
+
+#space {
   height:35px;
 }
