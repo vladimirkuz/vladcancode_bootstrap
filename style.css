@@ -5,6 +5,9 @@
 /*#animated {
   display: none;
 }*/
+.card-body {
+  height: 12em;
+}
 
 .vertical-center {
   display: flex;
