@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Completed/Ravenous/precache-manifest.da398a35e96e61d2ccbb1d403604d095.js"
+  "/Completed/Yelp/precache-manifest.da398a35e96e61d2ccbb1d403604d095.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Completed/Ravenous/index.html", {
-  
+workbox.routing.registerNavigationRoute("/Completed/Yelp/index.html", {
+
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
