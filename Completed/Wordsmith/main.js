@@ -7,23 +7,24 @@ const inputField = document.querySelector('#input');
 const submit = document.querySelector('#submit');
 const responseField = document.querySelector('#responseField');
 
-// AJAX function
-const getSuggestions = () => {
+
+// GET AJAX function to Datamuse API
+async function getData() {
+
 	const wordQuery = inputField.value;
   const endpoint = url + queryParams + wordQuery;
 
-  const xhr = new XMLHttpRequest;
-
-  xhr.responseType = 'json';
-
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-  renderResponse(xhr.response)
+	try {
+		const response = await fetch(endpoint);
+		if (response.ok) {
+			const jsonResponse = await response.json();
+			renderResponse(jsonResponse, wordQuery);
+		}
+		throw new Error('Request Failed!');
+	} catch (error) {
+		console.log(error);
 	}
-  };
 
-  xhr.open('GET', endpoint);
-  xhr.send();
 }
 
 // Clear previous results and display results to webpage
@@ -32,7 +33,7 @@ const displaySuggestions = (event) => {
   while(responseField.firstChild){
     responseField.removeChild(responseField.firstChild);
   };
-  getSuggestions();
+  getData();
 }
 
 submit.addEventListener('click', displaySuggestions);

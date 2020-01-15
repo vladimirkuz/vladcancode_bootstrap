@@ -36,7 +36,7 @@ a:visited {
 .main {
   height: 30rem;
   padding-top: 1rem;
-  background-image: url("./images/cupcakebanner.JPG");
+  background-image: url(https://storage.cloud.google.com/www.vladcancode.com/Completed/Media_Query/Images/cupcakebanner.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -72,6 +72,12 @@ a:link {
 
 a:hover {
   text-decoration: underline;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+
 }
 
 .supporting,
