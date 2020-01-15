@@ -7,9 +7,8 @@ const inputField = document.querySelector('#input');
 const shortenButton = document.querySelector('#shorten');
 const responseField = document.querySelector('#responseField');
 
-// AJAX functions
-// Code goes here
-const shortenUrl = async() => {
+// AJAX function ES8
+async function getData() {
   const urlToShorten = inputField.value;
   const data = JSON.stringify({destination: urlToShorten});
 
@@ -22,10 +21,8 @@ const shortenUrl = async() => {
     }
   })
 
-  if (response.ok){
-    const jsonResponse = await response.json();
-    renderResponse(jsonResponse);
-  }
+  const jsonResponse = await response.json();
+  renderResponse(jsonResponse); // helper function
 
   }catch(error){
     console.log(error);
@@ -38,7 +35,7 @@ const displayShortUrl = (event) => {
   while(responseField.firstChild){
     responseField.removeChild(responseField.firstChild);
   }
-  shortenUrl();
+  getData();
 }
 
 shortenButton.addEventListener('click', displayShortUrl);
