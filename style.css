@@ -6,7 +6,12 @@
   display: none;
 }*/
 .card-body {
-  height: 12em;
+  height: 14em;
+}
+
+.btn {
+  max-width: 8rem;
+  min-width: 6rem;
 }
 
 .vertical-center {
