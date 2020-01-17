@@ -2,9 +2,9 @@
     height: calc(100vh - 64px);
 }
 
-/*#animated {
-  display: none;
-}*/
+#animated {
+  opacity: 0.9;
+}
 .card-body {
   height: 14em;
 }
@@ -118,4 +118,8 @@ a.socialIcon:hover, .socialHoverClass {
 
 #space {
   height:35px;
+}
+
+.form {
+  width: 60%;
 }
