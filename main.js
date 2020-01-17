@@ -7,16 +7,24 @@ $(document).ready(function () {
   });
 */
 
- $('#form').submit( (e) => {
+// form submission
+ $('#form').submit((e) => {
   e.preventDefault();
   $.ajax({
-      url:'http://localhost:4001/send-email',
+      url:'https://thawing-falls-99935.herokuapp.com/send-email',
       type:'post',
       data:$('#form').serialize()
-  }).toggle(400);
-})
+  });
 
-  document.querySelectorAll('a[href^="#home"]').forEach(anchor => {
+  $('#form').trigger("reset");
+
+  $('#submit-form').prop('disabled', true);
+
+  document.getElementById('submit-form').innerHTML = 'Message sent!';
+  document.getElementById('submit-form').style.backgroundColor = 'red';
+});
+
+  /*document.querySelectorAll('a[href^="#top"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
           e.preventDefault();
 
@@ -24,7 +32,7 @@ $(document).ready(function () {
               behavior: 'smooth'
           });
       });
-  });
+  });*/
 
   document.querySelectorAll('a[href^="#about"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
