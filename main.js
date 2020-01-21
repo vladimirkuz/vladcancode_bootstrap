@@ -1,11 +1,5 @@
 $(document).ready(function () {
 
-  //$('#animated').hide().fadeIn(4000)
-
-  /*$('#submit-form').submit(function(e){
-    e.preventDefault();
-  });
-*/
 
 // form submission
  $('#form').submit((e) => {

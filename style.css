@@ -6,6 +6,12 @@ html {
   scroll-behavior: smooth;
 }
 
+#home {
+  background-image: url("./images/jumbotron.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #animated {
   opacity: 0.9;
 }
