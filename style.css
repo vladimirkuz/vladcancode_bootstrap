@@ -133,3 +133,8 @@ a.socialIcon:hover, .socialHoverClass {
 .form {
   width: 60%;
 }
+
+footer {
+      background-color: #f5f5f5;
+      padding-top: 1rem;
+}
