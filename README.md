@@ -5,5 +5,7 @@ Built With
 * Bootstrap
 * React/Express/SQL in projects
 
+Run `npm start`
+
 Author
 Vlad Kuznetsov
